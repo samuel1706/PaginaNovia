@@ -1,0 +1,88 @@
+/* Fondo romántico con animación */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fondoAnimado 5s infinite alternate ease-in-out;
+}
+
+/* Animación del fondo */
+@keyframes fondoAnimado {
+    0% { background: linear-gradient(to right, #ff758c, #ff7eb3); }
+    100% { background: linear-gradient(to right, #ff6b81, #ffa5c1); }
+}
+
+/* Contenedor de la carta */
+.carta-container {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, latido 3s infinite ease-in-out 2s;
+}
+
+/* Animación de desvanecido */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animación de latido */
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Título de la carta */
+.carta-titulo {
+    font-size: 24px;
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+/* Texto de la carta */
+.carta-texto {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 1s;
+}
+
+/* Botón de volver */
+button {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 1.5s;
+}
+
+button:hover {
+    background-color: #cc3754;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}

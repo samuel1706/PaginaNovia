@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Contenedor del juego */
+.juego-container {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animación de desvanecido */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Pregunta */
+#pregunta {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Input */
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff4d6d;
+    border-radius: 5px;
+    width: 80%;
+    outline: none;
+    text-align: center;
+}
+
+/* Botón */
+button {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #cc3754;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Mensaje */
+#mensaje {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#opcionesContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.imagen-opcion {
+    width: 80px;  /* Ajusta el tamaño según lo que desees */
+    height: 80px; /* Ajusta el tamaño según lo que desees */
+    object-fit: cover;  /* Asegura que la imagen se recorte si es necesario */
+    border-radius: 10px; /* Opcional, para bordes redondeados */
+    margin-bottom: 10px;
+}
+
+.boton-opcion {
+    margin-top: 10px;
+}
